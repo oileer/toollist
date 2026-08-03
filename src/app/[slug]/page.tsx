@@ -23,7 +23,7 @@ export async function generateMetadata({
   if (!ferramenta) return {};
 
   return {
-    title: `${ferramenta.nome} — toollist`,
+    title: ferramenta.nome,
     description: ferramenta.descricaoLonga,
     openGraph: {
       title: ferramenta.nome,
