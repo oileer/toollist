@@ -14,11 +14,12 @@ Hub de ferramentas online (utilitários web) — clone funcional inspirado no in
 ## Status
 - [x] Planejamento e catálogo completo → `PLANEJAMENTO.md`
 - [x] Estratégia de execução → `CLAUDE.md`
-- [ ] Scaffold Next.js + Tailwind
-- [ ] Fase 1: implementar todas as ferramentas sem custo (🟢)
+- [x] Scaffold Next.js + Tailwind
+- [x] Primeira ferramenta no ar: `consulta-cnpj` (via BrasilAPI, gratuita) — saiu de ordem por demanda (era 🔴, virou viável)
+- [ ] Fase 1: implementar as demais ferramentas sem custo (🟢)
 - [ ] Integração Google AdSense
 - [ ] SEO (sitemap, metadata, schema.org)
-- [ ] Deploy Vercel + domínio
+- [x] Deploy Vercel + domínio `toollist.eullerlolato.com`
 
 ## Fase 1 (primeira ação)
 Implementar **todas as ferramentas sem custo (🟢)** — ~72 ferramentas 100% client-side.

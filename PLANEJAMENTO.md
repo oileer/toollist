@@ -149,7 +149,7 @@ Contagem: **~72 🟢 · ~27 🟡 · ~20 🔴**
 | 105 | Teste de velocidade | `teste-de-velocidade` | velocidade da internet | 🔴 |
 | 106 | Minha localização | `minha-localizacao-atual` | mapa da posição | 🟡 |
 | 107 | Distância entre cidades | `distancia-entre-cidades` | no mapa | 🔴 |
-| 108 | Consulta CNPJ | `consulta-cnpj` | dados de empresa | 🔴 |
+| 108 | Consulta CNPJ | `consulta-cnpj` | dados de empresa | ✅ (BrasilAPI, gratuita) |
 | 109 | Consulta CEP | `consulta-cep` | endereço pelo CEP | 🔴 |
 
 ### 📱 Instagram / Redes
