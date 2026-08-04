@@ -52,3 +52,29 @@ Depois: 🟡 (libs: QR, código de barras, PDF, imagem, OCR) e por fim 🔴 (API
 npx create-next-app@latest . --ts --tailwind --app --src-dir
 npm run dev
 ```
+
+## Status real (2026-08-03)
+
+Scaffold feito, deploy no ar em `toollist.eullerlolato.com` (Vercel, deploy
+automático a cada push em `main`; domínio: registro A → `76.76.21.21` na
+zona Cloudflare `eullerlolato.com`).
+
+**Arquitetura implementada** (seguindo o que já estava planejado acima):
+- `src/lib/tools.ts` — registro central
+- `src/app/[slug]/page.tsx` — rota genérica por slug, `generateStaticParams`
+  + `generateMetadata`, mapeia slug → componente
+- `src/components/tools/<Nome>.tsx` — um componente client por ferramenta
+- `src/app/api/<algo>/route.ts` — quando a ferramenta precisa de backend
+  (evita CORS, centraliza formato de resposta)
+
+**Primeira ferramenta: `consulta-cnpj`** — saiu de ordem do plano (Fase 1 é
+implementar as 🟢 sem custo primeiro; essa era 🔴). Motivo: demanda direta
+durante a sessão que montou uma base própria de CNPJ pro funil de cold
+email do KODY (ver `~/apps/kody/` no servidor kody). Hoje usa **BrasilAPI**
+(gratuita, nacional, sem chave) via `src/app/api/cnpj/[cnpj]/route.ts` — a
+base própria do servidor (porta 8788, ver `~/CLAUDE.md` do servidor) ainda
+não tem endereço/CNAE/sócios, que essa página mostra. Migrar pra ela quando
+esses campos forem importados (eliminaria a dependência externa).
+
+**Pendente:** as ~72 ferramentas 🟢 do plano original (Fase 1 de verdade),
+Google AdSense, SEO técnico (sitemap.xml, robots.txt, schema.org).
